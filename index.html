@@ -1,1 +1,89 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Image with Scrollable Content</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            font-family: Arial, sans-serif;
+        }
+
+        .left-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100vh;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .left-panel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: right;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .left-panel img.visible {
+            opacity: 1;
+        }
+
+        .right-panel {
+            margin-left: 70%;
+            width: 30%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .section {
+            height: 100vh;
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="left-panel">
+        <img id="image1" src="/images/lakes.jpeg" alt="Image 1" class="visible">
+        <img id="image2" src="/images/ice-cream.jpeg" alt="Image 2">
+        <img id="image3" src="image3.jpg" alt="Image 3">
+        <img id="image4" src="image4.jpg" alt="Image 4">
+    </div>
+    <div class="right-panel">
+        <div class="section" data-image="image1" data-position="right">Section 1: Scroll to see the image change.</div>
+        <div class="section" data-image="image2" data-position="top">Section 2: The image will change to image2.jpg here.</div>
+        <div class="section" data-image="image3" data-position="bottom">Section 3: The image will change to image3.jpg here.</div>
+        <div class="section" data-image="image4" data-position="left">Section 4: The image will change to image4.jpg here.</div>
+    </div>
+
+    <script>
+        $(window).on('scroll', function () {
+            $('.section').each(function () {
+                const rect = this.getBoundingClientRect();
+
+                if (rect.top < $(window).height() / 2 && rect.bottom > $(window).height() / 2) {
+                    const targetImageId = $(this).data('image');
+                    const targetImage = $('#' + targetImageId);
+
+                    if (!targetImage.hasClass('visible')) {
+                        $('.left-panel img').removeClass('visible');
+                        targetImage.css('object-position', $(this).data('position')); // Update position
+                        targetImage.addClass('visible');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
