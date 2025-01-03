@@ -1,0 +1,8 @@
+spouse1: 
+  short_name: Chris
+  long_name: Chris Williamson
+  role: Husband
+spouse2:
+  short_name: Beth
+  long_name: Beth Kelly
+  role: Wife
