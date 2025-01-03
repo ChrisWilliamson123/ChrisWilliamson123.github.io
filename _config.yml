@@ -30,5 +30,3 @@ permalink: pretty
 
 exclude:
   - _compress_images_cache.yml
-
-destination: release
