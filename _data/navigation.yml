@@ -1,19 +1,20 @@
-- name: Our Story
-  link: /#ourstory
-- name: Celebrations
-  link: /celebrations
+- name: Home
+  link: /
+- name: Venue
+  link: /venue
+- name: Details
+  link: /details # venue, date, start time, schedule, dress code
+- name: 
 - name: People
   link: /people
-- name: Details
-  link: /details
 - name: FAQ
   link: /faq
-- name: City Guide
-  link: /guide
+# - name: City Guide
+#   link: /guide
 - name: Registry
   link: /registry
-- name: Photos
-  link: /photo-gallery
+# - name: Photos
+#   link: /photo-gallery
 - name: Livestream
   link: /livestream
 - name: RSVP

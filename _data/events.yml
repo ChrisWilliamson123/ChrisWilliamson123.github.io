@@ -16,22 +16,22 @@
 
 - name: Wedding Ceremony
   main_event: true
-  date: 2021-04-03 17:00:00 −04:00
-  endDate: 2021-04-03 21:00:00 -04:00
-  attire: snappy casual
-  description: Our wedding ceremony will be the perfect blend of our separate Catholic and Baptist traditions. Please arrive at least 10 minutes prior to the start of the ceremony in order to find your seat. There will be a parking attendant on site to direct you, and the venue will also provide transportation to the ceremony site if needed. We ask that you please ensure that your cell phones are off and out of sight for the duration of the ceremony.
+  date: 2026-09-19 14:00:00 +01:00
+  endDate: 2026-09-19 15:00:00 +01:00
+  attire: Smart
+  description: Ceremony description coming soon...
   transportation:
   shuttle:
   location:
-    address: 640 Pansy Hill Rd
-    city: Harriman
-    state: TN
-    long_state: Tennessee
-    zip: 37748
-    coordinates: 41.911652,-87.641253
-    google_maps_url: https://www.google.com/maps/place/St+Michael+in+Old+Town/@41.912635,-87.6408956,15z/data=!4m2!3m1!1s0x0:0xe227f2c7eb743c04
-    venue_name:
-  calendar_description: We can't wait to see you on the day of the wedding. For any questions or issues, contact Nathan Orick.
+    address: Delamere Manor
+    city: Cuddington Lane
+    state: Cheshire
+    long_state: Cheshire
+    zip: CW8 2TE
+    coordinates: 53.236572,-2.624501
+    google_maps_url: https://www.google.co.uk/maps/place/Delamere+Manor/@53.2368651,-2.6316314,15.49z/data=!4m14!1m7!3m6!1s0x487afb1cba022d73:0x2e6317e3d8dfe64d!2sDelamere+Manor!8m2!3d53.23671!4d-2.624671!16s%2Fg%2F11cm73y213!3m5!1s0x487afb1cba022d73:0x2e6317e3d8dfe64d!8m2!3d53.23671!4d-2.624671!16s%2Fg%2F11cm73y213?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D
+    venue_name: Delamere Manor
+  calendar_description: We can't wait to see you on the day of the wedding. For any questions or issues, contact us at .....
 
 - name: Reception
   date_alt: Immediately following the ceremony

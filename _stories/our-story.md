@@ -1,11 +1,15 @@
 ---
 order: 0
 ---
-## Our Story
+## Venue
 
 Chris was a Southern California boy who ran cross-country, attended
 an all-boys Catholic high school (shenanigans ensued), and
-perfected his image as the “chill smart guy”.  Nikita was a
+perfected his image as the “chill smart guy”.
+
+- Testing 123
+
+Nikita was a
 Midwestern girl, a dancer, musician, and hopeful writer who
 embodied every stereotype of the over-achiever.  A pair of
 acceptance letters brought them together to that special place
