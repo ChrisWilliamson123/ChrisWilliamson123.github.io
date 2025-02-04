@@ -5,37 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .parallax-hero {
-            background-image: url('assets/img/manor-5.webp');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 300px;
-        }
-        .parallax-venue {
-            background-image: url('assets/img/delamere-manor.jpg');
-        }
-        .parallax-day {
-            background-image: url('assets/img/manor-2.jpg');
-        }
-        .parallax-transport {
-            background-image: url('assets/img/manor-3.jpg');
-        }
-
-        .map {
-            min-height: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="#" class="text-xl font-bold text-gray-800">Wedding</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="#venue" class="text-gray-600 hover:text-gray-900">Venue</a>
+                        <a href="#the-day" class="text-gray-600 hover:text-gray-900">The Day</a>
+                        <a href="#transport" class="text-gray-600 hover:text-gray-900">Transport</a>
+                        <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+                        <!-- <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a> -->
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none focus:text-gray-900">
+                        ☰
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+            <a href="#venue" class="block text-gray-600 py-2">Venue</a>
+            <a href="#the-day" class="block text-gray-600 py-2">The Day</a>
+            <a href="#transport" class="block text-gray-600 py-2">Transport</a>
+            <a href="#contact" class="block text-gray-600 py-2">Contact</a>
+            <!-- <a href="#contact" class="block text-gray-600 py-2">Contact</a> -->
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Hero Section with Parallax -->
     <section class="relative h-screen flex items-center justify-center text-center text-white parallax-hero">
@@ -51,11 +58,12 @@
     <!-- <div class="parallax parallax-venue"></div> -->
 
     <!-- Venue Details Section -->
-    <section id="venue" class="py-12 px-6 md:px-16 bg-white text-gray-800">
+    <a class="anchor" id="venue"></a>
+    <section class="py-12 px-6 md:px-16 bg-white text-gray-800">
         <h2 class="text-3xl md:text-4xl font-bold text-center">Venue Details</h2>
         <p class="text-lg text-center mt-2 text-gray-600">Join us at a beautiful location to celebrate our love.</p>
         <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div class="flex flex-col">
+            <div>
                 <h3 class="text-2xl font-semibold">📍 Location</h3>
                 <p class="mt-2 text-gray-700">Beautiful Gardens, Sunset Avenue, Dreamland, 12345</p>
                 <h3 class="text-2xl font-semibold mt-6">📅 Date & Time</h3>
@@ -70,13 +78,12 @@
                     We look forward to celebrating with you!
                 </p>
                 <h3 class="text-2xl font-semibold mt-6">📍 Find Us Here</h3>
-                <iframe class="w-full flex flex-grow rounded-lg mt-2 shadow-md map" 
+                <iframe class="w-full rounded-lg mt-2 shadow-md map" 
                         src="https://www.google.com/maps/embed/v1/place?q=delamere+manor&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
             <div>
-                <img src="assets/img/delamere-manor.jpg" alt="Venue" class="rounded-lg shadow-lg w-full">
-                
+                <img src="assets/img/delamere-manor.jpg" alt="Venue" class="rounded-lg shadow-lg w-full">   
             </div>
         </div>
     </section>
@@ -85,28 +92,29 @@
     <div class="parallax parallax-day"></div>
 
     <!-- The Day Section -->
+    <a class="anchor" id="the-day"></a>
     <section class="py-12 px-6 md:px-16 bg-gray-50 text-gray-800">
         <h2 class="text-3xl md:text-4xl font-bold text-center">The Day</h2>
         <p class="text-lg text-center mt-2 text-gray-600">Here’s what to expect on our special day.</p>
         <div class="mt-8 max-w-3xl mx-auto">
             <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">🎉 3:30 PM - Guest Arrival</h3>
+                <h3 class="text-2xl font-semibold">🎉 1:30 PM - Guest Arrival</h3>
                 <p class="text-gray-700">Guests arrive and take their seats. Enjoy some light refreshments.</p>
             </div>
             <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">💍 4:00 PM - Ceremony Begins</h3>
+                <h3 class="text-2xl font-semibold">💍 2:00 PM - Ceremony Begins</h3>
                 <p class="text-gray-700">The wedding ceremony starts, so please be seated by this time.</p>
             </div>
             <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">🍽️ 6:00 PM - Reception & Dinner</h3>
+                <h3 class="text-2xl font-semibold">🍽️ 2:30 PM - Reception & Dinner</h3>
                 <p class="text-gray-700">Join us for a delicious meal and celebrate together.</p>
             </div>
             <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">🕺 8:00 PM - Dancing & Drinks</h3>
+                <h3 class="text-2xl font-semibold">🕺 6:00 PM - Dancing & Drinks</h3>
                 <p class="text-gray-700">The dance floor opens! Let’s party and enjoy some cocktails.</p>
             </div>
             <div class="border-l-4 border-gray-700 pl-4">
-                <h3 class="text-2xl font-semibold">🎆 11:00 PM - Farewell</h3>
+                <h3 class="text-2xl font-semibold">🎆 12:00 PM - Farewell</h3>
                 <p class="text-gray-700">Time to say goodbye and cherish the memories!</p>
             </div>
         </div>
@@ -116,6 +124,7 @@
     <div class="parallax parallax-transport"></div>
 
     <!-- Parking & Transport Section -->
+    <a class="anchor" id="transport"></a>
     <section class="py-12 px-6 md:px-16 bg-white text-gray-800">
         <h2 class="text-3xl md:text-4xl font-bold text-center">Parking & Transport</h2>
         <p class="text-lg text-center mt-2 text-gray-600">There is ample parking available at the venue for all guests.</p>
@@ -126,6 +135,31 @@
                 <li><strong>Sunset Cabs:</strong> (555) 234-5678</li>
                 <li><strong>Luxury Rides:</strong> (555) 345-6789</li>
             </ul>
+        </div>
+    </section>
+
+    <!-- Parallax Separator -->
+    <div class="parallax parallax-contact"></div>
+
+    <!-- Contact Section -->
+    <a class="anchor" id="contact"></a>
+    <section class="py-12 px-6 md:px-16 bg-gray-50 text-gray-800">
+        <h2 class="text-3xl md:text-4xl font-bold text-center">Contact Us</h2>
+        <p class="text-lg text-center mt-2 text-gray-600">If you have any questions, feel free to reach out to us.</p>
+        <!-- <div class="mt-8 max-w-3xl mx-auto hidden md:block">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO_Kk9ek4bLKzQAGMq2tz_oUCg5oT7alQI6hXuLY7yoad8SQ/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <div class="mt-8 mx-auto md:hidden">
+            <a href="https://forms.gle/AsRRG18w4n8GTsEY7" class="bg-slate-900 text-white px-6 py-3 rounded-lg text-lg font-semibold">Contact Us</a>
+        </div> -->
+
+        <div class="mt-8 max-w-3xl mx-auto">
+            <div class="block md:hidden text-center">
+                <a href="https://forms.gle/AsRRG18w4n8GTsEY7" target="_blank" class="bg-slate-900 text-white px-6 py-3 rounded-lg text-lg font-semibold">Fill Out the Form</a>
+            </div>
+            <div class="hidden md:block">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO_Kk9ek4bLKzQAGMq2tz_oUCg5oT7alQI6hXuLY7yoad8SQ/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
         </div>
     </section>
 </body>
