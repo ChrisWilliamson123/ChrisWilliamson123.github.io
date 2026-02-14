@@ -3,164 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Website</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="output.css">
+    <title>Our Wedding</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100">
-    <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center space-x-8">
-                    <a href="#" class="text-xl font-bold text-gray-800">Wedding</a>
-                    <div class="hidden md:flex space-x-4">
-                        <a href="#venue" class="text-gray-600 hover:text-gray-900">Venue</a>
-                        <a href="#the-day" class="text-gray-600 hover:text-gray-900">The Day</a>
-                        <a href="#transport" class="text-gray-600 hover:text-gray-900">Transport</a>
-                        <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
-                        <!-- <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a> -->
-                    </div>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-toggle" class="text-gray-600 focus:outline-none focus:text-gray-900">
-                        ☰
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
-            <a href="#venue" class="block text-gray-600 py-2">Venue</a>
-            <a href="#the-day" class="block text-gray-600 py-2">The Day</a>
-            <a href="#transport" class="block text-gray-600 py-2">Transport</a>
-            <a href="#contact" class="block text-gray-600 py-2">Contact</a>
-            <!-- <a href="#contact" class="block text-gray-600 py-2">Contact</a> -->
-        </div>
-    </nav>
-
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
-
-    <!-- Hero Section with Parallax -->
-    <section class="relative h-screen flex items-center justify-center text-center text-white parallax-hero">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative z-10 px-6">
-            <h1 class="text-4xl md:text-6xl font-bold">BETH & CHRIS</h1>
-            <p class="text-lg md:text-2xl mt-4">19th September 2026</p>
-            <a href="#venue" class="mt-6 inline-block bg-white text-gray-800 px-6 py-3 rounded-lg text-lg font-semibold">Discover More</a>
-        </div>
-    </section>
-
-    <!-- Parallax Separator -->
-    <!-- <div class="parallax parallax-venue"></div> -->
-
-    <!-- Venue Details Section -->
-    <a class="anchor" id="venue"></a>
-    <section class="py-12 px-6 md:px-16 bg-white text-gray-800">
-        <h2 class="text-3xl md:text-4xl font-bold text-center">Venue Details</h2>
-        <p class="text-lg text-center mt-2 text-gray-600">Join us at a beautiful location to celebrate our love.</p>
-        <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div>
-                <h3 class="text-2xl font-semibold">📍 Location</h3>
-                <p class="mt-2 text-gray-700">Beautiful Gardens, Sunset Avenue, Dreamland, 12345</p>
-                <h3 class="text-2xl font-semibold mt-6">📅 Date & Time</h3>
-                <ul class="list-disc list-inside mt-2">
-                    <li><strong>Ceremony:</strong> 4:00 PM - 5:00 PM</li>
-                    <li><strong>Reception:</strong> 6:00 PM - 11:00 PM</li>
-                    <li><strong>Dress Code:</strong> Formal / Semi-Formal</li>
-                </ul>
-                <h3 class="text-2xl font-semibold mt-6">🌟 Special Instructions</h3>
-                <p class="mt-2 text-gray-700 text-justify">
-                    Parking is available on-site. Please arrive at least 30 minutes before the ceremony starts. 
-                    We look forward to celebrating with you!
-                </p>
-                <h3 class="text-2xl font-semibold mt-6">📍 Find Us Here</h3>
-                <iframe class="w-full rounded-lg mt-2 shadow-md map" 
-                        src="https://www.google.com/maps/embed/v1/place?q=delamere+manor&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-            <div>
-                <img src="assets/img/delamere-manor.jpg" alt="Venue" class="rounded-lg shadow-lg w-full">   
-            </div>
-        </div>
-    </section>
-
-    <!-- Parallax Separator -->
-    <div class="parallax parallax-day"></div>
-
-    <!-- The Day Section -->
-    <a class="anchor" id="the-day"></a>
-    <section class="py-12 px-6 md:px-16 bg-gray-50 text-gray-800">
-        <h2 class="text-3xl md:text-4xl font-bold text-center">The Day</h2>
-        <p class="text-lg text-center mt-2 text-gray-600">Here’s what to expect on our special day.</p>
-        <div class="mt-8 max-w-3xl mx-auto">
-            <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">🎉 1:30 PM - Guest Arrival</h3>
-                <p class="text-gray-700">Guests arrive and take their seats. Enjoy some light refreshments.</p>
-            </div>
-            <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">💍 2:00 PM - Ceremony Begins</h3>
-                <p class="text-gray-700">The wedding ceremony starts, so please be seated by this time.</p>
-            </div>
-            <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">🍽️ 2:30 PM - Reception & Dinner</h3>
-                <p class="text-gray-700">Join us for a delicious meal and celebrate together.</p>
-            </div>
-            <div class="border-l-4 border-gray-700 pl-4 mb-6">
-                <h3 class="text-2xl font-semibold">🕺 6:00 PM - Dancing & Drinks</h3>
-                <p class="text-gray-700">The dance floor opens! Let’s party and enjoy some cocktails.</p>
-            </div>
-            <div class="border-l-4 border-gray-700 pl-4">
-                <h3 class="text-2xl font-semibold">🎆 12:00 PM - Farewell</h3>
-                <p class="text-gray-700">Time to say goodbye and cherish the memories!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Parallax Separator -->
-    <div class="parallax parallax-transport"></div>
-
-    <!-- Parking & Transport Section -->
-    <a class="anchor" id="transport"></a>
-    <section class="py-12 px-6 md:px-16 bg-white text-gray-800">
-        <h2 class="text-3xl md:text-4xl font-bold text-center">Parking & Transport</h2>
-        <p class="text-lg text-center mt-2 text-gray-600">There is ample parking available at the venue for all guests.</p>
-        <div class="mt-8 max-w-3xl mx-auto">
-            <h3 class="text-2xl font-semibold">🚖 Local Taxi Services</h3>
-            <ul class="list-disc list-inside mt-2 text-gray-700">
-                <li><strong>Dreamland Taxis:</strong> (555) 123-4567</li>
-                <li><strong>Sunset Cabs:</strong> (555) 234-5678</li>
-                <li><strong>Luxury Rides:</strong> (555) 345-6789</li>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#where-and-when">Where and When</a></li>
+                <li><a href="#timings">Timings</a></li>
+                <li><a href="#transport">Transport</a></li>
+                <li><a href="#accommodation">Accommodation</a></li>
+                <li><a href="#details">Fine Details</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
             </ul>
+        </nav>
+        <div class="hero">
+            <h1>Beth & Chris</h1>
+            <p>Are getting married!</p>
+            <p>19th September 2026</p>
         </div>
-    </section>
+    </header>
 
-    <!-- Parallax Separator -->
-    <div class="parallax parallax-contact"></div>
-
-    <!-- Contact Section -->
-    <a class="anchor" id="contact"></a>
-    <section class="py-12 px-6 md:px-16 bg-gray-50 text-gray-800">
-        <h2 class="text-3xl md:text-4xl font-bold text-center">Contact Us</h2>
-        <p class="text-lg text-center mt-2 text-gray-600">If you have any questions, feel free to reach out to us.</p>
-        <!-- <div class="mt-8 max-w-3xl mx-auto hidden md:block">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO_Kk9ek4bLKzQAGMq2tz_oUCg5oT7alQI6hXuLY7yoad8SQ/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-        <div class="mt-8 mx-auto md:hidden">
-            <a href="https://forms.gle/AsRRG18w4n8GTsEY7" class="bg-slate-900 text-white px-6 py-3 rounded-lg text-lg font-semibold">Contact Us</a>
-        </div> -->
-
-        <div class="mt-8 max-w-3xl mx-auto">
-            <div class="block md:hidden text-center">
-                <a href="https://forms.gle/AsRRG18w4n8GTsEY7" target="_blank" class="bg-slate-900 text-white px-6 py-3 rounded-lg text-lg font-semibold">Fill Out the Form</a>
+    <main class="container">
+        <section id="where-and-when">
+            <h2>Where and When</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2387.9479148218657!2d-2.6272512861664516!3d53.236709972142094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487afb1cba022d73%3A0x2e6317e3d8dfe64d!2sDelamere%20Manor!5e0!3m2!1sen!2sch!4v1771064189378!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="hidden md:block">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO_Kk9ek4bLKzQAGMq2tz_oUCg5oT7alQI6hXuLY7yoad8SQ/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </section>
+
+        <section id="timings">
+            <h2>Timings of the Day</h2>
+            <ul>
+                <li>2:00 PM - Ceremony</li>
+                <li>3:30 PM - Drinks Reception</li>
+                <li>5:00 PM - Wedding Breakfast</li>
+                <li>7:00 PM - Evening Reception</li>
+                <li>12:00 AM - Carriages</li>
+            </ul>
+        </section>
+
+        <section id="transport">
+            <h2>Transport</h2>
+            <p>Taxis are readily available in the area. We recommend booking in advance.</p>
+            <p>Local taxi numbers:</p>
+            <ul>
+                <li>Abbey Taxis: 01606 888 888</li>
+                <li>Frodsham & District Taxis: 01928 733 733</li>
+            </ul>
+        </section>
+
+        <section id="accommodation">
+            <h2>Accommodation</h2>
+            <p>There are a number of hotels and B&Bs in the surrounding area. We recommend booking early as it is a popular destination.</p>
+            <ul>
+                <li>The Hollies Forest Lodges</li>
+                <li>The Royal Oak Hotel</li>
+                <li>The Swan at Tarporley</li>
+            </ul>
+        </section>
+
+        <section id="details">
+            <h2>Fine Details</h2>
+            <h3>Gifts</h3>
+            <p>Your presence at our wedding is the greatest gift of all. However, should you wish to honour us with a gift, a contribution to our honeymoon fund would be gratefully received.</p>
+            <h3>Children</h3>
+            <p>To allow all our guests to relax and enjoy themselves, we have chosen to make our wedding day an adults-only occasion. We hope this advance notice means you are still able to share our big day and will enjoy having the evening off!</p>
+            <h3>Dress Code</h3>
+            <p>Lounge suits and cocktail dresses.</p>
+        </section>
+
+        <section id="rsvp">
+            <h2>RSVP</h2>
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZyKlzR5LCQJP5rzeWz2NJyM_sSGCvhrVtApYkni0hW_OI2g/viewform?embedded=true" width="640" height="1062" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,93 @@
+:root {
+    --font-family: 'Lato', sans-serif;
+    --h1-font-family: 'Playfair Display', serif;
+    --h2-font-family: 'Playfair Display', serif;
+    --h3-font-family: 'Playfair Display', serif;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+h1, h2, h3 {
+    font-family: var(--h1-font-family);
+}
+
+header {
+    background-image: url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+header h1 {
+    font-family: var(--h1-font-family);
+    font-size: 4em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+nav {
+    background: transparent;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main.container {
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding-top: 60px; /* Offset for nav bar */
+}
+
+h2 {
+    font-family: var(--h2-font-family);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.map-container, .form-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.map-container iframe, .form-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
