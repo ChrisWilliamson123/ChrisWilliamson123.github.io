@@ -14,6 +14,7 @@ body {
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -35,7 +36,11 @@ header {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
@@ -50,18 +55,11 @@ header p {
 }
 
 nav {
-    background: transparent;
-    padding: 1em 0;
     position: sticky;
     top: 0;
-    background: transparent;
+    background-color: var(--primary-accent-color);
     padding: 1em 0;
-    position: sticky;
-    top: 0;
     z-index: 1;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -83,12 +81,13 @@ nav ul li a {
 }
 
 main.container {
-    padding: 0 20px;
+    padding: 20px;
+    background-color: var(--background-color);
 }
 
 section {
     margin-bottom: 40px;
-    padding-top: 60px; /* Offset for nav bar */
+    padding-top: 20px;
 }
 
 h2 {
