@@ -3,18 +3,34 @@
     --h1-font-family: 'Playfair Display', serif;
     --h2-font-family: 'Playfair Display', serif;
     --h3-font-family: 'Playfair Display', serif;
+    --background-color: #BCB4A3;
+    --text-color: #6D745C;
+    --primary-accent-color: #CBA979;
+    --secondary-accent-color: #B86830;
+    --tertiary-accent-color: #C46E58;
 }
 
 body {
     font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 h1, h2, h3 {
     font-family: var(--h1-font-family);
+    color: var(--primary-accent-color);
+}
+
+a {
+    color: var(--secondary-accent-color);
+}
+
+a:hover {
+    color: var(--tertiary-accent-color);
 }
 
 header {
-    background-image: url('https://via.placeholder.com/1920x1080');
+    background-image: url('images/delamere-manor-aeriel.jpeg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -26,6 +42,7 @@ header h1 {
     font-family: var(--h1-font-family);
     font-size: 4em;
     margin: 0;
+    color: white; /* Overriding the h1 color for the header */
 }
 
 header p {
@@ -33,6 +50,10 @@ header p {
 }
 
 nav {
+    background: transparent;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
     background: transparent;
     padding: 1em 0;
     position: sticky;
