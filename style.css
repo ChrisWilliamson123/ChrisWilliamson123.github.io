@@ -12,7 +12,6 @@
 
 body {
     font-family: var(--font-family);
-    background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
 }
@@ -34,24 +33,33 @@ header {
     background-image: url('images/delamere-manor-aeriel.jpeg');
     background-size: cover;
     background-position: center;
-    color: white;
-    text-align: center;
+    background-attachment: fixed;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-header h1 {
+.fixed-header-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.fixed-header-text h1 {
     font-family: var(--h1-font-family);
     font-size: 4em;
     margin: 0;
-    color: white; /* Overriding the h1 color for the header */
+    color: white;
 }
 
-header p {
+.fixed-header-text p {
     font-size: 1.5em;
+}
+
+#main-content {
+    z-index: 1;
 }
 
 nav {
@@ -59,7 +67,7 @@ nav {
     top: 0;
     background-color: var(--primary-accent-color);
     padding: 1em 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav ul {
@@ -83,6 +91,7 @@ nav ul li a {
 main.container {
     padding: 20px;
     background-color: var(--background-color);
+    position: relative;
 }
 
 section {
