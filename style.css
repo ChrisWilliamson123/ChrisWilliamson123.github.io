@@ -112,14 +112,29 @@ body:before {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -10;
-  background: url('images/delamere-manor-aeriel.jpeg') no-repeat center center;
-  -webkit-background-size: cover;
+}
+
+@media (max-width: 768px){
+  body:before {
+    background: url('images/delamere-manor-aeriel-portrait.jpeg') no-repeat center center;
+    -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  }
+}
+
+@media (min-width: 768px){
+  body:before {
+    background: url('images/delamere-manor-aeriel.jpeg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 
 /* @media (max-width: 768px){
@@ -141,6 +156,8 @@ body:before {
 
 .fixed-header-text {
     font-family: var(--beth-chris-font-family);
+    font-weight: normal; 
+    font-style: normal;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -153,6 +170,8 @@ body:before {
 
 .fixed-header-text h1 {
     font-family: var(--beth-chris-font-family);
+    font-weight: normal; 
+    font-style: normal;
     font-size: 4em;
     margin: 0;
     color: white;
