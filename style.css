@@ -121,9 +121,10 @@ body:before {
   body:before {
     background: url('images/delamere-manor-aeriel-portrait.jpeg') no-repeat center center;
     -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 120vh;
   }
 }
 
