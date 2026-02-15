@@ -45,6 +45,10 @@ a.anchor {
   #desktop-nav {
     display: none;
   }
+
+  #mobile-nav {
+    display: block;
+  }
 }
 
 @media (min-width: 768px){
@@ -63,6 +67,14 @@ nav#desktop-nav {
     width: 100%;
     top: 0;
     padding: 0.5em 0;
+}
+
+nav#desktop-nav.honeymoon-nav {
+    position: relative;
+}
+
+nav#mobile-nav.honeymoon-nav {
+    position: relative;
 }
 
 nav#desktop-nav ul {
@@ -144,7 +156,7 @@ section .container p:last-child {
     /* margin-bottom: 0; */
 }
 
-#intro {
+#intro, #honeymoon-fund {
     background-color: var(--cream);
 }
 
@@ -187,7 +199,7 @@ section .container p:last-child {
 #mobile-nav {
     position: fixed;
     width: 100%;
-    display: block;
+    padding: 10px;
 }
 
 /* Ensure mobile nav list stacks vertically */
@@ -227,7 +239,7 @@ section .container p:last-child {
     border: none;
     cursor: pointer;
     padding: 0;
-    margin: 10px;
+    margin: 0;
     
 }
 
