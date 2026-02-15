@@ -1,8 +1,16 @@
 :root {
-    --font-family: 'Lato', sans-serif;
-    --h1-font-family: 'Playfair Display', serif;
-    --h2-font-family: 'Playfair Display', serif;
-    --h3-font-family: 'Playfair Display', serif;
+    --font-family: "Inter", sans-serif;
+    --h1-font-family: "Inter", sans-serif;
+    --h2-font-family: "Inter", sans-serif;
+    --h3-font-family: "Inter", sans-serif;
+    --beth-chris-font-family: 'Petit Formal Script', cursive;
+    --grey: #BCB4A3;
+    --burnt-orange: #B86830;
+    --cream: #CBA979;
+    --pink: #C46E58;
+    --green: #5f6d40;
+
+    --text-color: white;
 }
 
 body {
@@ -10,8 +18,73 @@ body {
     margin: 0;
 }
 
+h1, h2, h3, p, ul {
+    color: var(--text-color);
+}
+
 h1, h2, h3 {
     font-family: var(--h1-font-family);
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-bottom: 0.5rem;;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+
+@media (max-width: 768px){
+  #desktop-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 768px){
+  #mobile-nav {
+    display: none;
+  }
+}
+
+nav {
+    backdrop-filter: blur(10px) brightness(85%);
+    z-index: 2;
+}
+
+nav#desktop-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 0.5em 0;
+}
+
+nav#desktop-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav#desktop-nav ul li {
+    margin: 0 1.5em;
+}
+
+nav ul li a {
+    color: var(--primary-inverse);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: var(--pink);
 }
 
 header {
@@ -23,25 +96,26 @@ header {
 }
 
 .fixed-header-text {
+    font-family: var(--beth-chris-font-family);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
     width: 100%;
     z-index: 0;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .fixed-header-text h1 {
-    font-family: var(--h1-font-family);
+    font-family: var(--beth-chris-font-family);
     font-size: 4em;
     margin: 0;
     color: white;
 }
 
 .fixed-header-text p {
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 #main-content {
@@ -50,38 +124,48 @@ header {
     background-color: var(--background-color);
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: var(--primary);
-    padding: 1em 0;
-    z-index: 2;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1.5em;
-}
-
-nav ul li a {
-    color: var(--primary-inverse);
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
 section {
     padding: var(--spacing) 0;
+    margin: 0;
+    text-align: center;
 }
 
-section:nth-of-type(even) {
-    background-color: var(--card-background-color);
+section ul li {
+    list-style: none;
+}
+
+section a {
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+section .container p:last-child {
+    /* margin-bottom: 0; */
+}
+
+#intro {
+    background-color: var(--cream);
+}
+
+#timings {
+    background-color: var(--burnt-orange);
+}
+
+#transport {
+    background-color: var(--pink);
+}
+
+#accommodation {
+    background-color: var(--green);
+}
+
+#details {
+    background-color: var(--grey);
+}
+
+#rsvp {
+    background-color: var(--cream);
 }
 
 .map-container, .form-container {
@@ -97,4 +181,96 @@ section:nth-of-type(even) {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* MOBILE NAV CONTAINER */
+#mobile-nav {
+    position: fixed;
+    width: 100%;
+    display: block;
+}
+
+/* Ensure mobile nav list stacks vertically */
+#mobile-nav ul {
+    display: flex;
+    flex-direction: column;   /* THIS makes items vertical */
+    align-items: center;      /* optional: center them */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+/* Open state */
+#mobile-nav.open ul {
+    max-height: 500px; /* large enough to fit content */
+}
+
+/* Space out items vertically */
+#mobile-nav li {
+    padding: 14px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* HAMBURGER BUTTON */
+#hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px;
+    
+}
+
+/* Hamburger lines */
+#hamburger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary-inverse);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* MENU (hidden by default) */
+#mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+/* When open */
+#mobile-nav.open #mobile-menu {
+    max-height: 500px; /* large enough to fit menu */
+}
+
+/* Optional: vertical styling */
+#mobile-menu li {
+    padding: 12px 0;
+    text-align: center;
+}
+
+/* Animate hamburger into X */
+#mobile-nav.open #hamburger-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#mobile-nav.open #hamburger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-nav.open #hamburger-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
