@@ -99,12 +99,44 @@ nav ul li a:hover {
     color: var(--pink);
 }
 
-header {
-    background-image: url('images/delamere-manor-aeriel.jpeg');
+/* header {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
+} */
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url('images/delamere-manor-aeriel.jpeg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* @media (max-width: 768px){
+  header {
+    background-image: url('images/delamere-manor-aeriel-portrait.jpeg');
+  }
+}
+
+@media (min-width: 768px){
+  header {
+    background-image: url('images/delamere-manor-aeriel.jpeg');
+  }
+} */
+
+#hero {
+    height: 100vh;
+    width: 100%;
 }
 
 .fixed-header-text {
