@@ -1,4 +1,4 @@
-document.querySelectorAll('nav.home-nav a').forEach(anchor => {
+document.querySelectorAll('nav.home-nav a.scroll').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
